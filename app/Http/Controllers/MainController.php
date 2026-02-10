@@ -6,15 +6,11 @@ use Illuminate\Http\Request;
 
 class MainController extends Controller
 {
-    public int $a = 1;
-    public int $b = 2;
+    public function showIndex(){
+        return view('home');
+    }
 
-
-    public function show1()
-    {
-        $a = $this->a;
-        $b = $this->b;
-        $products = ['булочка', 'сок', 'чай', 'кофе', 'вода'];
-        return view('second', compact('a', 'b', 'products'));
+    public function showArray(){
+        return view('array', compact('array'));
     }
 }
